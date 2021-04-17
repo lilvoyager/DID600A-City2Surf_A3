@@ -286,13 +286,119 @@
         /* to animate the progress bar */
       }
 
-    .infographic_icon {
-        background-color: #383838;
+    .fundraise_infographic__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px 0;
     }
 
-    .fundraise_infographic__container {
+    .fundraise_infographic {
         display: flex;
         align-items: center;
+    }
+
+    p.fundraise_infographic__number {
+        font-family: 'Jost', sans-serif;
+        font-size: 28px;
+        margin: 0;
+        font-weight: 600;
+    }
+
+    p.fundraise_infographic__text {
+        font-family: 'Jost', sans-serif;
+        font-size: 22px;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    .records_section {
+        margin: 0 auto;
+        padding: 34px;
+        max-width: 1400px;
+    }
+
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        color: #ED1C91;
+        font-size: 25px;
+    }
+
+    .records_section__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .record__box {
+        width: 30%;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .male_record {
+        background-color: #00aeef;
+        /* each category to have differnet background colour */
+    }
+
+    .female_record {
+        background-color: #ED1C91;
+    }
+
+    .elite_wheelchair_record {
+        background-color:#00BBCD;
+    }
+
+    .trophy_record__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        /* so absolute positions can be set for child element */
+        background-color: #FFFFFF;
+        width: 75%;
+        padding: 10px 0;
+        margin: 0 0 10px 0;
+    }
+    
+    .trophy_image {
+        width: 90%;
+    }
+
+    p.record_time {
+        position: absolute;
+        /* so the record time sits in the middle of the trophy */
+        top: 20%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+        margin: 0 auto;
+    }
+
+    p.record_holder_name {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin: 0 auto;
+    }
+
+    p.record_category {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin: 0 auto;
+    }
+
+    .media_section {
+        margin: 0 auto;
+        padding: 34px;
+        max-width: 1400px;
     }
 
 } 
