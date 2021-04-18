@@ -402,6 +402,11 @@
         max-width: 1400px;
     }
 
+    .youtube_video {
+        display: flex;
+        justify-content: center;
+    }
+
     .event_cheer_subsection {
         display: flex;
         justify-content: space-between;
@@ -523,6 +528,83 @@
         font-size: 13px;
         color: #383838;
         font-weight: 100;
+    }
+
+    .charity_partners_section {
+        margin: 0 auto;
+        padding: 34px;
+        max-width: 1400px;
+    }
+
+    .charity_partners_logo_container {
+        flex-wrap: wrap;
+    }
+
+    .charity_partners_logo_container img {
+        max-width: 130px;
+        padding: 10px 20px 0 0;
+    }
+
+    .footer_divider{
+        height: 80px;
+        background-color: #ED1C91;
+        margin: 20px 0 0 0;
+    }
+
+    .footer {
+        background-color:#314854;
+    }
+
+    .footer_container {
+        margin: 0 auto;
+        padding: 34px;
+        max-width: 1400px;
+    }
+
+    .footer_columns_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer_column {
+        width: 20%;
+        padding: 25px 25px 25px 0;
+        box-sizing: border-box;
+    }
+
+    .footer_container a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    p.footer_column_title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: #FFFFFF;
+        letter-spacing: 1.5px;
+        margin: 0 auto;
+    }
+
+    p.footer_column_item {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        color: #FFFFFF;
+        font-weight: 300;
+        text-decoration: underline dashed 1px #FFFFFF;
+        text-underline-offset: 5px;
+    }
+
+    .social_media_logo {
+        color: #FFFFFF;
+        margin: 16px 10px 0 0; 
+    }
+
+    .copyright p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: #FFFFFF;
+        font-weight: 300;
     }
 
 } 
