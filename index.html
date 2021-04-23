@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="Lightbox/css/lightbox.css">
     <script src="toggle.js"></script>
     <script src="progress-bar.js"></script>
+    <script src="slideshow.js"></script>
 </head>
 <!-- end of head tag -->
 
@@ -51,8 +52,10 @@
                             <p>SIGN IN</p>
                         </div>
                         <div class="register_button">
-                            <i class="fas fa-user fa-3x user_icon"></i>
-                            <p>REGISTER</p>
+                            <div class="register_button__container">
+                                <i class="fas fa-user user_icon"></i>
+                                <p>REGISTER</p>
+                            </div>
                         </div>
                     </div>
                     <!-- the sign in button and register button are in their own container to allow the two buttons to stay together when they move around to different positions in the Nav bar in mobile, tablet and desktop view -->
@@ -61,7 +64,11 @@
         </div>
         <!-- end of header section -->
 
-        <div class="hero_background"></div>
+        <div class="video_background">
+            <div class="video_foreground">
+                <iframe src="https://www.youtube.com/watch?v=taTAxgUBgqI&ab_channel=City2Surf" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
         <div class="hero">
             <div class="hero_header_container">
                 <img class="logo_date" src="images/C2S21-Logo-date.png">
@@ -86,10 +93,10 @@
             </div>
             <div id="progress-bar" class="fundraise_counter">
                 <div class="fundraise_counter__background"></div>
-                <!-- the div to fill in the progress bar will be triggered by the Javascript linked to the HTML. Solution was inspired by script found through Google search -->
+                <!-- the div to fill in the progress bar will be triggered by the Javascript linked to the HTML. Solution was inspired by script found through Google search https://stackoverflow.com/questions/42398910/css-animations-to-toggle-when-in-viewport-with-vanilla-js -->
             </div>
             <div class="fundraise_infographic__container">
-                <div class="fundraise_infographic"></div>
+                <div class="fundraise_infographic">
                     <i class="fas fa-user infographic_icon"></i>
                     <div class="fundraise_infographic__text_container"> 
                         <p class="fundraise_infographic__number">26</p>
@@ -120,6 +127,7 @@
             </div>
         </div>
         <!-- end of fundraise section -->
+
 
         <div class="records_section">
             <h2>First Place record  Male, Female & Elite Wheelchair Athlete (1971 - 2019)</h2>
@@ -160,82 +168,89 @@
             <div class="event_cheer_subsection">
                 <div class="event_cheer_container event_cheer_first_box">
                     <div class="event_cheer__icon_container">
-                        <i class="fas fa-globe-asia fa-10x my_icon"></i>
+                        <i class="fas fa-globe-asia cheer_icon"></i>
                     </div>
                     <p class="event_cheer__title">World’s Largest</p>
                     <p class="event_cheer__caption">Join 85,000 runners as they run from Sydney’s CBD to Bondi Beach</p>
                 </div>
                 <div class="event_cheer_container event_cheer_second_box">
                     <div class="event_cheer__icon_container">
-                        <i class="fas fa-heart fa-10x my_icon"></i>
+                        <i class="fas fa-heart cheer_icon"></i>
                     </div>
                     <p class="event_cheer__title">Run with Heart</p>
                     <p class="event_cheer__caption">Giving back to charity is the beating heart of City2Surf</p>
                 </div>
                 <div class="event_cheer_container event_cheer_third_box">
                     <div class="event_cheer__icon_container">
-                        <i class="far fa-grin-beam fa-10x my_icon"></i>
+                        <i class="far fa-grin-beam cheer_icon"></i>
                     </div>
                     <p class="event_cheer__title">Have fun</p>
                     <p class="event_cheer__caption">Get your mates together and have some fun</p>
                 </div>
             </div>
-            <div class="photo_gallery">
-                <a href="Lightbox/images/50-years-3-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf 50 year anniversary run">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/50-years-3-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a>  
-                <a href="Lightbox/images/Share-the-love-medals-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf finishers">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/Share-the-love-medals-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a>  
-                <a href="Lightbox/images/Share-the-love-2-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf live stream while you run">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/Share-the-love-2-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a>   
-                <a href="Lightbox/images/Charity-4-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf running for a cause">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/Charity-4-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a>  
-                <a href="Lightbox/images/City2SurfHero01-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf historic event 50 years in the making">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/City2SurfHero01-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a> 
-                <a href="Lightbox/images/Charity-2-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf The Salvation Army Mascot">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/Charity-2-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a> 
-                <a href="Lightbox/images/City2SurfHero02-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf historic event 50 years in the making">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/City2SurfHero02-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a> 
-                <a href="Lightbox/images/Charity-5-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf Cancer Council team">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/Charity-5-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a> 
-                <a href="Lightbox/images/Share-the-love-3-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf marathon finishers">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/Share-the-love-3-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a> 
-                <a href="Lightbox/images/Charity-1-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf Chinese dragon">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/Charity-1-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a> 
-                <a href="Lightbox/images/50-year-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf Dress up and run">
-                    <!-- large photo to be opened when image is selected -->
-                    <img class="event_photo" src="Lightbox/images/50-years-small.jpg" alt="" />
-                    <!-- thumbnail image -->
-                </a> 
+            <div class="photo__gallery__background">
+                <div class="photo_gallery">
+                    <a href="Lightbox/images/50-years-3-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf 50 year anniversary run">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/50-years-3-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a>  
+                    <a href="Lightbox/images/Share-the-love-medals-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf finishers">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/Share-the-love-medals-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a>  
+                    <a href="Lightbox/images/Share-the-love-2-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf live stream while you run">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/Share-the-love-2-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a>   
+                    <a href="Lightbox/images/Charity-4-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf running for a cause">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/Charity-4-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a>  
+                    <a href="Lightbox/images/City2SurfHero01-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf historic event 50 years in the making">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/City2SurfHero01-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a> 
+                    <a href="Lightbox/images/Charity-2-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf The Salvation Army Mascot">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/Charity-2-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a> 
+                    <a href="Lightbox/images/Charity-3-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf, bring the kids along">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/Charity-3-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a> 
+                    <a href="Lightbox/images/City2SurfHero02-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf historic event 50 years in the making">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/City2SurfHero02-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a> 
+                    <a href="Lightbox/images/Charity-5-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf Cancer Council team">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/Charity-5-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a> 
+                    <a href="Lightbox/images/Share-the-love-3-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf marathon finishers">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/Share-the-love-3-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a> 
+                    <a href="Lightbox/images/Charity-1-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf Chinese dragon">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/Charity-1-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a> 
+                    <a href="Lightbox/images/50-year-large.jpg" data-lightbox="photo_gallery_set" data-title="City 2 Surf Dress up and run">
+                        <!-- large photo to be opened when image is selected -->
+                        <img class="event_photo" src="Lightbox/images/50-years-small.jpg" alt="" />
+                        <!-- thumbnail image -->
+                    </a> 
+                </div>
             </div>
         </div>
         <!-- end of media section -->
@@ -276,7 +291,6 @@
                     <p class="news_article_date">OCT 2, 2020</p>
                 </div>
             </div>
-            </div>
         </div>
         <!-- end of news section -->
 
@@ -289,7 +303,7 @@
                 <img src="images/partner_logos/Australia+for+UNHCR.png">
                 <img src="images/partner_logos/Children's+Hospital+at+Westmead.png">
                 <img src="images/partner_logos/Stroke+Foundation.png">
-                <img src="images/partner_logos/cure+brain+cancer.jpeg""
+                <img src="images/partner_logos/cure+brain+cancer.jpeg">
                 <img src="images/partner_logos/NeuRA.png">
                 <img src="images/partner_logos/Sydney+Children's+Hospital+Foundation+o_480x320.png">
                 <img src="images/partner_logos/ACRF-logo.png">
@@ -327,7 +341,7 @@
                     <p class="footer_column_item"><a href="#">2019 Top 10</a></p>
                     <p class="footer_column_item"><a href="#">History & Legends</a></p>
                     <p class="footer_column_item"><a href="#">Volunteering</a></p>
-                    <p class="footer_column_item"><a href="#">News<a></p>
+                    <p class="footer_column_item"><a href="#">News</a></p>
                     <p class="footer_column_item"><a href="#">Video Series</a></p>
                 </div>
                 <div class="footer_column">

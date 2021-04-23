@@ -30,7 +30,7 @@
 
     .header__container {
         width: 100%;
-        max-width: 1400px;
+        max-width: 1012px;
         display: flex;
         /* Flex allows the logo and nav content to appear side by side on page */
         align-items: center;
@@ -140,12 +140,20 @@
         display: flex;
         justify-content: center;
         /* the centre align the text in the button */
+        align-content: center;
         cursor: pointer;
         /* to make pointer arrow appear when hovering over the button */
     }
 
-    .user_icon {
-        color: #000;
+    .register_button__container {
+        display: flex;
+        align-content: center;
+    }
+
+    i.user_icon {
+        color: #FFFFFF;
+        font-size: 26px;
+        /* to display text and override font-size:0 in main */
     }
 
     .register_button p {
@@ -158,19 +166,30 @@
         color: #FFFFFF;
     }
 
-    .hero_background {
+    .video_background {
+        z-index: -99;
+    }
+
+    .video_foreground, .video_background iframe {
+        margin: 40px 0 0 0;
+        width: 100%;
+        height: 450px;
+        pointer-events: none;
+    }
+
+    /* .video_background {
         margin: 60px 0 0 0;
         height: 450px;
         background-image:url(https://j.gifs.com/WLkNGE.gif);
-        background-size: cover;
+        background-size: cover; */
         /* so the GIF stretches across the entire page */
         /* Action : not showing up */
-    }
+    
 
     .hero {
         margin: 0 auto;
         padding: 0 34px;
-        max-width: 1400px;
+        max-width: 1012px;
         /* will be applied to all sections so content stays in middle of page when responsive */
         text-align: center;
     }
@@ -206,7 +225,7 @@
     .fundraise_section {
         margin: 0 auto;
         padding: 34px;
-        max-width: 1400px;
+        max-width: 1012px;
     }
 
     .fundraise_text__container {
@@ -287,11 +306,11 @@
         /* to animate the progress bar */
       }
 
-    .fundraise_infographic__container{
+    .fundraise_infographic__container {
+        margin: 16px 0;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin: 16px 0;
+        padding: 10px 70px;
     }
 
     .fundraise_infographic {
@@ -299,11 +318,22 @@
         align-items: center;
     }
 
+    .fundraise_infographic__text_container {
+        padding: 0 0 0 20px;
+    }
+
+    i.infographic_icon {
+        font-size: 30px;
+        /* to display text and override font-size:0 in main */
+    }
+
     p.fundraise_infographic__number {
         font-family: 'Jost', sans-serif;
         font-size: 28px;
         margin: 0;
         font-weight: 600;
+        line-height: 1;
+        /* to reduce the gap between the number and the text */
     }
 
     p.fundraise_infographic__text {
@@ -316,7 +346,7 @@
     .records_section {
         margin: 0 auto;
         padding: 34px;
-        max-width: 1400px;
+        max-width: 1012px;
     }
 
     h2 {
@@ -399,7 +429,7 @@
     .media_section {
         margin: 0 auto;
         padding: 34px;
-        max-width: 1400px;
+        max-width: 1012px;
     }
 
     .youtube_video {
@@ -444,8 +474,10 @@
         margin: 10px 0;
     }
 
-    .my_icon {
+    .cheer_icon {
         color: #383838;
+        font-size: 120px;
+        /* to override font-size:0 in main */
     }
 
     p.event_cheer__title {
@@ -479,7 +511,7 @@
     .news_section {
         margin: 0 auto;
         padding: 34px;
-        max-width: 1400px;
+        max-width: 1012px;
     }
 
     .news_section h2 {
@@ -545,11 +577,14 @@
     .charity_partners_section {
         margin: 0 auto;
         padding: 34px;
-        max-width: 1400px;
+        max-width: 1012px;
     }
 
     .charity_partners_logo_container {
+        display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
+        /* to wrap charity partners logo in a nice grid */
     }
 
     .charity_partners_logo_container img {
@@ -570,7 +605,7 @@
     .footer_container {
         margin: 0 auto;
         padding: 34px;
-        max-width: 1400px;
+        max-width: 1012px;
     }
 
     .footer_columns_container {

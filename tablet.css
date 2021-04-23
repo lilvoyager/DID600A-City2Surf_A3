@@ -1,0 +1,668 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+    body {
+        margin: 0;
+        /* to remove gap surrounding the edge of the page */
+    }
+
+    .main {
+        width: 100%;
+        margin:auto;
+        font-size: 0;
+        /* font-size 0 to remove random gap between div elements as browser is registering inlines as words  */
+        overflow-x: hidden;
+        /* to prevent horizontal scrolling for elements going beyond the page */
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #FFFFFF;
+        /* to put the header_container (fixed width) into a 100% width div */
+        position: fixed;
+        top: 0;
+        /* to make the nav bar sticky */
+        z-index: 10;
+        /* to make the header and nav bar sit above the body elements */
+    }
+
+    .header__container {
+        width: 100%;
+        max-width: 1012px;
+        display: flex;
+        /* Flex allows the logo and nav content to appear side by side on page */
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 28px;
+    }
+
+    .logo {
+        width: 128px;
+        padding: 0 5px;   
+        cursor: pointer;
+    }
+
+    nav {
+        width: 100%;
+        /* container width is now 100% as children elements are not stacked on top of each other instead of side-by-side. Flex is no longer displayed to facilitate this*/
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        /* to push nav elements to RHS */
+    }
+
+    .topnav {
+        display: flex;
+    }
+
+    ul.topnav {
+        margin: 0;
+        /* offsetting the <ul> margin as it is automatically indented */
+    }
+
+    ul.topnav li.hamburger {
+        height: 25px;
+        width: 25px;
+        /* to display the hamburger icon */
+        display: none;
+        /* to hide the hamburger icon in desktop view */
+    }
+
+    ul.topnav li.hamburger a {
+        height: 100%;
+        color: #000000;
+        font-size: 25px;
+        text-decoration: none;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* to display the hamburger icon */
+    }
+
+    .nav_button a {
+        text-decoration: none;
+        color: #000;
+        /* to remove underline and blue text colour for hyperlink */
+        font-size: 14px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        padding: 0 20px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    .nav_button a:hover {
+        color: #00aeef;
+        transition: 0.15s ease;
+        /* so the nav bar items turn blue and when the mouse hovers over them */
+    }
+
+    .nav_button--active a {
+        color: #00aeef;
+        /* to add another class to the nav_button that is currently active so it is underline and the text is blue */
+    }
+
+    .sign_in_register_container {
+        display: flex;
+        align-items: center;
+    }
+
+    .sign_in_button {
+        width: 102px;
+        border: 1.5px solid #ED1C91;
+        border-radius: 5px;
+        margin: 0 0 0 10px;
+        display: flex;
+        justify-content: center;
+        /* the centre align the text in the button */
+        cursor: pointer;
+        /* to make pointer arrow appear when hovering over the button */
+    }
+
+    .sign_in_button p {
+        font-size: 14px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        padding: 10px 16px;
+        margin: 0;
+        cursor: pointer;
+    }
+    
+    .register_button {
+        width: 102px;
+        border: 1.5px solid #ED1C91;
+        background-color: #ED1C91;
+        border-radius: 5px;
+        margin: 0 0 0 20px;
+        display: flex;
+        justify-content: center;
+        /* the centre align the text in the button */
+        align-content: center;
+        cursor: pointer;
+        /* to make pointer arrow appear when hovering over the button */
+    }
+
+    .register_button__container {
+        display: flex;
+        align-content: center;
+    }
+
+    i.user_icon {
+        color: #FFFFFF;
+        font-size: 26px;
+        /* to display text and override font-size:0 in main */
+    }
+
+    .register_button p {
+        font-size: 14px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        padding: 10px 16px;
+        margin: 0;
+        cursor: pointer;
+        color: #FFFFFF;
+    }
+
+    .video_background {
+        z-index: -99;
+    }
+
+    .video_foreground, .video_background iframe {
+        margin: 40px 0 0 0;
+        width: 100%;
+        height: 450px;
+        pointer-events: none;
+    }
+
+    /* .video_background {
+        margin: 60px 0 0 0;
+        height: 450px;
+        background-image:url(https://j.gifs.com/WLkNGE.gif);
+        background-size: cover; */
+        /* so the GIF stretches across the entire page */
+        /* Action : not showing up */
+    
+
+    .hero {
+        margin: 0 auto;
+        padding: 0 34px;
+        max-width: 1012px;
+        /* will be applied to all sections so content stays in middle of page when responsive */
+        text-align: center;
+    }
+
+    .hero_header_container{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo_date {
+        width: 426px;
+        padding: 28px;
+        margin: -80px 0 15px 0;
+        /* so the logo overlaps with the header image */
+        background-color: #FFFFFF;
+    }
+
+    h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
+        color: #ED1C91;
+        margin: 0 auto;
+    }
+    
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        color: #383838;
+    }
+
+    .fundraise_section {
+        margin: 0 auto;
+        padding: 34px;
+        max-width: 1012px;
+    }
+
+    .fundraise_text__container {
+        display: flex;
+        justify-content: space-between;
+        /* so the text can be on either end of the parent box */
+    }
+
+    .fundraise_text__raised {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* so the text can be left aligned */
+    }
+
+    .fundraise_text__target {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        /* so the text can be right aligned */
+    }
+
+    p.fundraise_text {
+        font-family: 'Jost', sans-serif;
+        font-size: 18px;
+        columns: #383838;
+        margin: 0;
+        /* to remove automatic spacing around text */
+    }
+
+    p.fundraise_amount {
+        font-family: 'Jost', sans-serif;
+        font-size: 30px;
+        columns: #383838;
+        font-weight: 600;
+        margin: 0;
+        /* to remove automatic spacing around text */
+    }
+
+    .fundraise_counter {
+        position: relative;
+        /* so absolute positions can be set for the children elements */
+        height: 34px;
+        margin: 16px 0;
+    }
+
+    .fundraise_counter__background {
+        position: absolute;
+        /* to stack two children elements on top of one another */
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        background-color: #F6F7F9;
+    }
+
+    .fundraise_counter__fill {
+        position: absolute;
+        /* to stack two children elements on top of one another */
+        top: 0;
+        left: 0;
+        z-index: 2;
+        /* for the blue bar to sit on top of the grey bar */
+        height: 100%;
+        min-width: 34px;
+        width: 29%;
+        border-radius: 20px;
+        background-color: #00AEEF;
+        animation: progressBar 3s ease-in-out;
+        animation-fill-mode: both;
+        /* to animate filling of the progress bar */
+    }
+
+    @keyframes progressBar {
+        0% { width: 0; }
+        100% { width: 29%; }
+        /* to animate the progress bar */
+      }
+
+    .fundraise_infographic__container {
+        margin: 16px 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 70px;
+    }
+
+    .fundraise_infographic {
+        display: flex;
+        align-items: center;
+    }
+
+    .fundraise_infographic__text_container {
+        padding: 0 0 0 20px;
+    }
+
+    i.infographic_icon {
+        font-size: 30px;
+        /* to display text and override font-size:0 in main */
+    }
+
+    p.fundraise_infographic__number {
+        font-family: 'Jost', sans-serif;
+        font-size: 28px;
+        margin: 0;
+        font-weight: 600;
+        line-height: 1;
+        /* to reduce the gap between the number and the text */
+    }
+
+    p.fundraise_infographic__text {
+        font-family: 'Jost', sans-serif;
+        font-size: 22px;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    .records_section {
+        margin: 0 auto;
+        padding: 34px;
+        max-width: 1012px;
+    }
+
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        color: #ED1C91;
+        font-size: 25px;
+    }
+
+    .records_section__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .record__box {
+        width: 30%;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .male_record {
+        background-color: #00aeef;
+        /* each category to have differnet background colour */
+    }
+
+    .female_record {
+        background-color: #ED1C91;
+    }
+
+    .elite_wheelchair_record {
+        background-color:#00BBCD;
+    }
+
+    .trophy_record__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        /* so absolute positions can be set for child element */
+        background-color: #FFFFFF;
+        width: 75%;
+        padding: 10px 0;
+        margin: 0 0 10px 0;
+    }
+    
+    .trophy_image {
+        width: 90%;
+    }
+
+    p.record_time {
+        position: absolute;
+        /* so the record time sits in the middle of the trophy */
+        top: 20%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+        margin: 0 auto;
+    }
+
+    p.record_holder_name {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin: 0 auto;
+    }
+
+    p.record_category {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin: 0 auto;
+    }
+
+    .media_section {
+        margin: 0 auto;
+        padding: 34px;
+        max-width: 1012px;
+    }
+
+    .youtube_video {
+        display: flex;
+        justify-content: center;
+    }
+
+    .event_cheer_subsection {
+        display: flex;
+        justify-content: space-between;
+        margin: 34px 0;
+    }
+
+    .event_cheer_container {
+        width: 30%;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event_cheer_first_box {
+        background-color:#00BBCD;
+    }
+
+    .event_cheer_second_box {
+        background-color: #ED1C91;
+    }
+
+    .event_cheer_third_box {
+        background-color:#00A6E7;
+    }
+
+    .event_cheer__icon_container {
+        text-align: center;
+        background-color: #FFFFFF;
+        width: 90%;
+        padding: 10px 0;
+        margin: 10px 0;
+    }
+
+    .cheer_icon {
+        color: #383838;
+        font-size: 120px;
+        /* to override font-size:0 in main */
+    }
+
+    p.event_cheer__title {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 26px;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin: 5px auto 10px auto;
+    }
+
+    p.event_cheer__caption {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin: 0 auto 10px auto;
+    }
+
+    .photo_gallery {
+        padding: 40px 20px 40px 20px;
+        background-color: #ED1C91;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .event_photo {
+        padding: 20px;
+    }
+
+    .news_section {
+        margin: 0 auto;
+        padding: 34px;
+        max-width: 1012px;
+    }
+
+    .news_section h2 {
+        margin: 0;
+        /* to remove additional spacing around the H2 title for this section */
+    }
+
+    .news_article_navigation {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navigation_arrow_box{
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0 0 20px 10px;
+        background-color: #F6F7F9;
+        border-radius: 5px;
+        width: 5%;
+        text-align: center;
+    }
+
+    .news_article_section__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .news_article_container {
+        width: 32%;
+        border-radius: 10px;
+        padding: 20px 0;
+        background-color: #F6F7F9;
+        padding: 20px;
+        box-sizing: border-box;
+        filter: drop-shadow(2px 2px 3px gray);
+    }
+
+    .news_article_image img {
+        max-width: 100%;
+    }
+
+    p.news_article_title {
+        font-family: 'Raleway', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 16px auto;
+        color: #1c1c1c;
+    }
+
+    p.news_article_caption {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        color: #383838;
+    }
+
+    p.news_article_date {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        color: #383838;
+        font-weight: 100;
+    }
+
+    .charity_partners_section {
+        margin: 0 auto;
+        padding: 34px;
+        max-width: 1012px;
+    }
+
+    .charity_partners_logo_container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* to wrap charity partners logo in a nice grid */
+    }
+
+    .charity_partners_logo_container img {
+        max-width: 130px;
+        padding: 10px 20px 0 0;
+    }
+
+    .footer_divider{
+        height: 80px;
+        background-color: #ED1C91;
+        margin: 20px 0 0 0;
+    }
+
+    .footer {
+        background-color:#314854;
+    }
+
+    .footer_container {
+        margin: 0 auto;
+        padding: 34px;
+        max-width: 1012px;
+    }
+
+    .footer_columns_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer_column {
+        width: 20%;
+        padding: 25px 25px 25px 0;
+        box-sizing: border-box;
+    }
+
+    .footer_container a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    p.footer_column_title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: #FFFFFF;
+        letter-spacing: 1.5px;
+        margin: 0 auto;
+    }
+
+    p.footer_column_item {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        color: #FFFFFF;
+        font-weight: 300;
+        text-decoration: underline dashed 1px #FFFFFF;
+        text-underline-offset: 5px;
+    }
+
+    .social_media_logo {
+        color: #FFFFFF;
+        margin: 16px 10px 0 0; 
+    }
+
+    .copyright p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: #FFFFFF;
+        font-weight: 300;
+    }
+
+} 
+/* closing bracket for media query */ 
+
+
+
+
+
+
+
+
+
+
