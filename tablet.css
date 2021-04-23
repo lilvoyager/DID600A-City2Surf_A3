@@ -248,7 +248,8 @@
     }
 
     .logo_date {
-        width: 426px;
+        min-width: 300px;
+        max-width: 400px;
         padding: 28px;
         margin: -80px 0 15px 0;
         /* so the logo overlaps with the header image */

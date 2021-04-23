@@ -248,9 +248,9 @@
     }
 
     .logo_date {
-        width: 426px;
+        width: 280px;
         padding: 28px;
-        margin: -80px 0 15px 0;
+        margin: -60px 0 15px 0;
         /* so the logo overlaps with the header image */
         background-color: #FFFFFF;
     }
