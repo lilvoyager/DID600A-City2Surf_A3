@@ -39,7 +39,7 @@
     }
 
     .logo {
-        width: 128px;
+        width: 110px;
         padding: 0 5px;   
         cursor: pointer;
     }
@@ -58,16 +58,23 @@
     }
 
     ul.topnav {
+        position: absolute;
+        top: 23px;
+        /* so the menu items appear above the nav bar, rather than changing the size of the nav bar when clicked */
         margin: 0;
         /* offsetting the <ul> margin as it is automatically indented */
-    }
-
-    ul.topnav li.hamburger {
         height: 25px;
         width: 25px;
-        /* to display the hamburger icon */
-        display: none;
-        /* to hide the hamburger icon in desktop view */
+        overflow: hidden;
+        /* to hide the links underneath the hamburger icon until clicked */
+        padding: 0;
+        cursor: pointer;
+        user-select: none;
+         /* to hide the links underneath the hamburger icon until clicked */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        order: 3;
     }
 
     ul.topnav li.hamburger a {
@@ -82,16 +89,48 @@
         /* to display the hamburger icon */
     }
 
+    .topnav.responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        /* to increase the width of the clickable area */
+        height: 500px;
+        /* to display all items in the hamburger menu */
+    }
+
+    .topnav.responsive li.hamburger {
+        width: fit-content; 
+        /* To make the width of the <li> item the same as the hamburger icon */
+        padding: 0;
+        margin-bottom: 24px;
+        border: none;
+        /* to remove border appearing around hamburger in responsive */
+    }
+
+    .topnav.responsive li {
+        text-align: right;
+        background-color: #ffffff;
+        /* background color is on the li items instead of topnav responsive because it would cover the section adjacent it */
+        width: 100%;
+        /* To fit the width of the topnav responsive */
+        border-bottom: #000 1.75px dashed;
+        /* to apply border to menu items in responsive */
+        box-sizing: border-box;
+    }
+
     .nav_button a {
         text-decoration: none;
         color: #000;
         /* to remove underline and blue text colour for hyperlink */
-        font-size: 14px;
+        font-size: 16px;
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
-        padding: 0 20px;
+        padding: 18px;
         margin: 0 auto;
         cursor: pointer;
+        display: block;
+        /* to maximise the clickable area of the nac button */
     }
 
     .nav_button a:hover {
@@ -105,13 +144,21 @@
         /* to add another class to the nav_button that is currently active so it is underline and the text is blue */
     }
 
+    i.search_icon {
+        font-size: 20px;
+        margin: 10px 25px 10px 5px;
+        padding: 0 20px;
+        order: 2;
+    }
+
     .sign_in_register_container {
         display: flex;
         align-items: center;
+        order: 1;
     }
 
     .sign_in_button {
-        width: 102px;
+        width: 125px;
         border: 1.5px solid #ED1C91;
         border-radius: 5px;
         margin: 0 0 0 10px;
@@ -132,7 +179,7 @@
     }
     
     .register_button {
-        width: 102px;
+        width: 125px;
         border: 1.5px solid #ED1C91;
         background-color: #ED1C91;
         border-radius: 5px;
@@ -191,7 +238,6 @@
         padding: 0 34px;
         max-width: 1012px;
         /* will be applied to all sections so content stays in middle of page when responsive */
-        text-align: center;
     }
 
     .hero_header_container{
@@ -211,7 +257,7 @@
 
     h3 {
         font-family: 'Oswald', sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         color: #ED1C91;
         margin: 0 auto;
     }
@@ -258,7 +304,7 @@
 
     p.fundraise_amount {
         font-family: 'Jost', sans-serif;
-        font-size: 30px;
+        font-size: 26px;
         columns: #383838;
         font-weight: 600;
         margin: 0;
@@ -310,7 +356,7 @@
         margin: 16px 0;
         display: flex;
         justify-content: space-between;
-        padding: 10px 70px;
+        padding: 10px 50px;
     }
 
     .fundraise_infographic {
@@ -323,13 +369,13 @@
     }
 
     i.infographic_icon {
-        font-size: 30px;
+        font-size: 28px;
         /* to display text and override font-size:0 in main */
     }
 
     p.fundraise_infographic__number {
         font-family: 'Jost', sans-serif;
-        font-size: 28px;
+        font-size: 24px;
         margin: 0;
         font-weight: 600;
         line-height: 1;
@@ -338,7 +384,7 @@
 
     p.fundraise_infographic__text {
         font-family: 'Jost', sans-serif;
-        font-size: 22px;
+        font-size: 20px;
         margin: 0;
         font-weight: 400;
     }
@@ -353,7 +399,7 @@
         font-family: 'Open Sans', sans-serif;
         font-weight: 600;
         color: #ED1C91;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .records_section__container {
@@ -365,7 +411,8 @@
         width: 30%;
         border-radius: 10px;
         text-align: center;
-        padding: 20px 0;
+        padding: 20px 10px;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -405,14 +452,15 @@
         /* so the record time sits in the middle of the trophy */
         top: 20%;
         font-family: 'Open Sans', sans-serif;
-        font-size: 25px;
+        font-size: 22px;
         font-weight: 600;
         margin: 0 auto;
+        color: #383838;
     }
 
     p.record_holder_name {
         font-family: 'Open Sans', sans-serif;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 500;
         color: #FFFFFF;
         margin: 0 auto;
@@ -420,7 +468,7 @@
 
     p.record_category {
         font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         color: #FFFFFF;
         margin: 0 auto;
@@ -476,13 +524,13 @@
 
     .cheer_icon {
         color: #383838;
-        font-size: 120px;
+        font-size: 90px;
         /* to override font-size:0 in main */
     }
 
     p.event_cheer__title {
         font-family: 'Open Sans', sans-serif;
-        font-size: 26px;
+        font-size: 22px;
         font-weight: 600;
         color: #FFFFFF;
         margin: 5px auto 10px auto;
@@ -490,14 +538,14 @@
 
     p.event_cheer__caption {
         font-family: 'Open Sans', sans-serif;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 400;
         color: #FFFFFF;
         margin: 0 auto 10px auto;
     }
 
     .photo_gallery {
-        padding: 40px 20px 40px 20px;
+        padding: 20px 10px 20px 10px;
         background-color: #ED1C91;
         display: flex;
         justify-content: center;
@@ -505,7 +553,11 @@
     }
 
     .event_photo {
-        padding: 20px;
+        padding: 10px;
+    }
+
+    .photo_gallery a {
+        font-size: 0;
     }
 
     .news_section {
@@ -528,10 +580,14 @@
         padding: 10px;
         box-sizing: border-box;
         margin: 0 0 20px 10px;
-        background-color: #F6F7F9;
+        background-color: #E5E5E5;
         border-radius: 5px;
         width: 5%;
         text-align: center;
+    }
+
+    i.arrow_icon {
+        font-size: 18px;
     }
 
     .news_article_section__container {
@@ -555,7 +611,7 @@
 
     p.news_article_title {
         font-family: 'Raleway', sans-serif;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 500;
         margin: 16px auto;
         color: #1c1c1c;
@@ -563,13 +619,13 @@
 
     p.news_article_caption {
         font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         color: #383838;
     }
 
     p.news_article_date {
         font-family: 'Open Sans', sans-serif;
-        font-size: 13px;
+        font-size: 12px;
         color: #383838;
         font-weight: 100;
     }
@@ -588,7 +644,7 @@
     }
 
     .charity_partners_logo_container img {
-        max-width: 130px;
+        max-width: 100px;
         padding: 10px 20px 0 0;
     }
 
@@ -614,7 +670,7 @@
     }
 
     .footer_column {
-        width: 20%;
+        width: 50%;
         padding: 25px 25px 25px 0;
         box-sizing: border-box;
     }
@@ -638,13 +694,24 @@
         font-size: 16px;
         color: #FFFFFF;
         font-weight: 300;
-        text-decoration: underline dashed 1px #FFFFFF;
-        text-underline-offset: 5px;
+        padding: 15px 0;
+        /* to increase size of clickable area */
+        border-bottom: #FFFFFF 2px dotted;
+        margin: 0 auto;
+        /* to remove auto margin space */
+    }
+
+    a.footer_column_item {
+        width: 100%;
+        padding: 100%;
+        /* to increase size of clickable area */
     }
 
     .social_media_logo {
         color: #FFFFFF;
-        margin: 16px 10px 0 0; 
+        margin: 16px 0 0 0; 
+        width: 24%;
+        padding: 0 0 20px 0;
     }
 
     .copyright p {
