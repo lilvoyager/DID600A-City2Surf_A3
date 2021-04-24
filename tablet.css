@@ -546,9 +546,15 @@
         margin: 0 auto 10px auto;
     }
 
+    .photo_gallery_section {
+        background-size: cover;
+        background-image: url("images/photo_gallery_backgroud.jpg");
+        background-repeat: no-repeat;
+    }
+
     .photo_gallery {
-        padding: 20px 10px 20px 10px;
-        background-color: #ED1C91;
+        margin: 0 auto;
+        padding: 34px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
