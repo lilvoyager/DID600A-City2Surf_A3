@@ -5,7 +5,7 @@ carousel();
 
 function carousel() {
   var i;
-  var x = document.getElementsByClassName("event_cheer_container");
+  var x = document.getElementsByClassName("hero_slideshow");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }

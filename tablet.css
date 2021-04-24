@@ -231,6 +231,10 @@
         /* so the GIF stretches across the entire page */
         /* Action : not showing up */
     
+    .hero_slideshow {
+        display: none;
+        /* hero slideshow will only be used in mobile to save mobile data */
+    }
 
     .hero {
         margin: 0 auto;
@@ -475,9 +479,14 @@
         padding: 30px;
     }
 
-    .youtube_video {
+    .youtube__video_container{
         display: flex;
         justify-content: center;
+    }
+
+    .youtube_video {
+        width: 808px;
+        height: 454px;
     }
 
     .event_cheer_subsection {

@@ -235,7 +235,10 @@
         /* so the GIF stretches across the entire page */
         /* Action : not showing up */
     
-
+    .hero_slideshow {
+        width: 100%;
+    }
+    
     .hero {
         margin: 0 auto;
         padding: 0 34px;
@@ -482,11 +485,15 @@
         padding: 20px;
     }
 
-    .youtube_video {
+    .youtube__video_container{
         display: flex;
         justify-content: center;
     }
 
+    .youtube_video {
+        width: 404px;
+        height: 227px;
+    }
     .event_cheer_subsection {
         display: flex;
         justify-content: space-between;
@@ -719,7 +726,7 @@
 
     a.footer_column_item {
         width: 100%;
-        padding: 100%;
+        padding: 100%
         /* to increase size of clickable area */
     }
 

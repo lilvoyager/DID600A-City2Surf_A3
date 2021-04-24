@@ -116,6 +116,7 @@
     }
 
     .sign_in_button {
+        padding: 10px 8px;
         width: 102px;
         border: 2px solid #ED1C91;
         border-radius: 5px;
@@ -125,6 +126,7 @@
         /* the centre align the text in the button */
         cursor: pointer;
         /* to make pointer arrow appear when hovering over the button */
+        text-decoration: none;
     }
 
     .sign_in_button:hover{
@@ -136,7 +138,6 @@
         font-size: 14px;
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
-        padding: 10px 30px;
         margin: 0;
         cursor: pointer;
     }
@@ -146,6 +147,7 @@
     }
     
     .register_button {
+        padding: 10px 8px;
         width: 102px;
         border: 1.5px solid #ED1C91;
         background-color: #ED1C91;
@@ -157,6 +159,7 @@
         align-content: center;
         cursor: pointer;
         /* to make pointer arrow appear when hovering over the button */
+        text-decoration: none;
     }
 
     .register_button:hover {
@@ -170,6 +173,9 @@
     }
 
     i.user_icon {
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
         color: #FFFFFF;
         font-size: 20px;
         /* to display text and override font-size:0 in main */
@@ -179,7 +185,6 @@
         font-size: 14px;
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
-        padding: 10px 16px;
         margin: 0;
         cursor: pointer;
         color: #FFFFFF;
@@ -204,6 +209,11 @@
         /* so the GIF stretches across the entire page */
         /* Action : not showing up */
     
+    
+    .hero_slideshow {
+        display: none;
+        /* hero slideshow will only be used in mobile to save mobile data */
+    }
 
     .hero {
         margin: 0 auto;
@@ -328,7 +338,7 @@
         margin: 16px 0;
         display: flex;
         justify-content: space-between;
-        padding: 10px 70px;
+        padding: 10px 40px;
     }
 
     .fundraise_infographic {
@@ -466,9 +476,14 @@
         max-width: 1012px;
     }
 
-    .youtube_video {
+    .youtube__video_container{
         display: flex;
         justify-content: center;
+    }
+
+    .youtube_video {
+        width: 1012px;
+        height: 569px;
     }
 
     .event_cheer_subsection {
@@ -486,6 +501,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        cursor: pointer;
+    }
+
+    .event_cheer_container:hover {
+        filter: drop-shadow(2px 2px 8px gray);
+        transform: scale(1.05);
+	    position: relative; 
+        z-index: 1;
+        /* to give the image a drop shadow, and ensure that the image stays above the other images when hovered-over */
     }
 
     .event_cheer_first_box {
