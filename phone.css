@@ -30,7 +30,6 @@
 
     .header__container {
         width: 100%;
-        max-width: 1012px;
         display: flex;
         /* Flex allows the logo and nav content to appear side by side on page */
         align-items: center;
@@ -42,6 +41,7 @@
         width: 110px;
         padding: 0 5px;   
         cursor: pointer;
+        order: 1;
     }
 
     nav {
@@ -51,6 +51,7 @@
         align-items: center;
         justify-content: flex-end;
         /* to push nav elements to RHS */
+        flex-wrap: wrap;
     }
 
     .topnav {
@@ -148,18 +149,20 @@
         font-size: 20px;
         margin: 10px 25px 10px 5px;
         padding: 0 20px;
-        order: 2;
+        order: 1;
     }
 
     .sign_in_register_container {
         display: flex;
         align-items: center;
-        order: 1;
+        order: 4;
+        width: 100%;
+        min-width: 400px;
     }
 
     .sign_in_button {
-        width: 125px;
-        border: 1.5px solid #ED1C91;
+        width: 50%;
+        border: 2px solid #ED1C91;
         border-radius: 5px;
         margin: 0 0 0 10px;
         display: flex;
@@ -179,7 +182,7 @@
     }
     
     .register_button {
-        width: 125px;
+        width: 50%;
         border: 1.5px solid #ED1C91;
         background-color: #ED1C91;
         border-radius: 5px;
@@ -220,7 +223,7 @@
     .video_foreground, .video_background iframe {
         margin: 40px 0 0 0;
         width: 100%;
-        height: 450px;
+        height: 200px;
         pointer-events: none;
     }
 
@@ -236,8 +239,6 @@
     .hero {
         margin: 0 auto;
         padding: 0 34px;
-        max-width: 1012px;
-        /* will be applied to all sections so content stays in middle of page when responsive */
     }
 
     .hero_header_container{
@@ -248,16 +249,16 @@
     }
 
     .logo_date {
-        width: 280px;
+        width: 250px;
         padding: 28px;
-        margin: -60px 0 15px 0;
+        margin: -30px 0 15px 0;
         /* so the logo overlaps with the header image */
         background-color: #FFFFFF;
     }
 
     h3 {
         font-family: 'Oswald', sans-serif;
-        font-size: 18px;
+        font-size: 16px;
         color: #ED1C91;
         margin: 0 auto;
     }
@@ -270,8 +271,7 @@
 
     .fundraise_section {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 20px;
     }
 
     .fundraise_text__container {
@@ -296,7 +296,7 @@
 
     p.fundraise_text {
         font-family: 'Jost', sans-serif;
-        font-size: 18px;
+        font-size: 16px;
         columns: #383838;
         margin: 0;
         /* to remove automatic spacing around text */
@@ -304,7 +304,7 @@
 
     p.fundraise_amount {
         font-family: 'Jost', sans-serif;
-        font-size: 26px;
+        font-size: 20px;
         columns: #383838;
         font-weight: 600;
         margin: 0;
@@ -314,7 +314,7 @@
     .fundraise_counter {
         position: relative;
         /* so absolute positions can be set for the children elements */
-        height: 34px;
+        height: 28px;
         margin: 16px 0;
     }
 
@@ -356,26 +356,27 @@
         margin: 16px 0;
         display: flex;
         justify-content: space-between;
-        padding: 10px 50px;
+        flex-wrap: wrap;
     }
 
     .fundraise_infographic {
         display: flex;
         align-items: center;
+        width: 50%;
     }
 
     .fundraise_infographic__text_container {
-        padding: 0 0 0 20px;
+        padding: 10px;
     }
 
     i.infographic_icon {
-        font-size: 28px;
+        font-size: 24px;
         /* to display text and override font-size:0 in main */
     }
 
     p.fundraise_infographic__number {
         font-family: 'Jost', sans-serif;
-        font-size: 24px;
+        font-size: 20px;
         margin: 0;
         font-weight: 600;
         line-height: 1;
@@ -384,38 +385,38 @@
 
     p.fundraise_infographic__text {
         font-family: 'Jost', sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         margin: 0;
         font-weight: 400;
     }
 
     .records_section {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 20px;
     }
 
     h2 {
         font-family: 'Open Sans', sans-serif;
         font-weight: 600;
         color: #ED1C91;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .records_section__container {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        /* content now stacked instead of side by side */
     }
 
     .record__box {
-        width: 30%;
+        width: 100%;
         border-radius: 10px;
-        text-align: center;
-        padding: 20px 10px;
+        padding: 20px;
         box-sizing: border-box;
         display: flex;
-        flex-direction: column;
         align-items: center;
+        margin: 10px 0;
     }
 
     .male_record {
@@ -438,19 +439,19 @@
         position: relative;
         /* so absolute positions can be set for child element */
         background-color: #FFFFFF;
-        width: 75%;
-        padding: 10px 0;
-        margin: 0 0 10px 0;
+        width: 40%;
+        padding: 10px 0 50px 0;
+        margin: 0 30px 10px 0;
     }
     
     .trophy_image {
-        width: 90%;
+        width: 50%;
     }
 
     p.record_time {
         position: absolute;
         /* so the record time sits in the middle of the trophy */
-        top: 20%;
+        bottom: 5%;
         font-family: 'Open Sans', sans-serif;
         font-size: 22px;
         font-weight: 600;
@@ -460,15 +461,17 @@
 
     p.record_holder_name {
         font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 500;
         color: #FFFFFF;
         margin: 0 auto;
+        line-height: 2;
+        /* to create more space between the two lines of text in mobile to make it easier to read */
     }
 
     p.record_category {
         font-family: 'Open Sans', sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         color: #FFFFFF;
         margin: 0 auto;
@@ -476,8 +479,7 @@
 
     .media_section {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 20px;
     }
 
     .youtube_video {
@@ -488,18 +490,19 @@
     .event_cheer_subsection {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        /* content now stacked instead of side by side */
         margin: 34px 0;
     }
 
     .event_cheer_container {
-        width: 30%;
+        width: 100%;
         border-radius: 10px;
-        text-align: center;
-        padding: 20px;
+        padding: 30px 20px;
         box-sizing: border-box;
         display: flex;
-        flex-direction: column;
         align-items: center;
+        margin: 10px 0;
     }
 
     .event_cheer_first_box {
@@ -517,14 +520,21 @@
     .event_cheer__icon_container {
         text-align: center;
         background-color: #FFFFFF;
-        width: 90%;
+        width: 70%;
+        max-width: 152px;
+        /* so boxes are the same size */
+        height:100%;
         padding: 10px 0;
-        margin: 10px 0;
+        margin: 10px 25px 10px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* to align icons in the center of the box */
     }
 
     .cheer_icon {
-        color: #383838;
-        font-size: 90px;
+        color: #312626;
+        font-size: 70px;
         /* to override font-size:0 in main */
     }
 
@@ -538,14 +548,14 @@
 
     p.event_cheer__caption {
         font-family: 'Open Sans', sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         color: #FFFFFF;
         margin: 0 auto 10px auto;
     }
 
     .photo_gallery {
-        padding: 20px 10px 20px 10px;
+        padding: 20px 10px;
         background-color: #ED1C91;
         display: flex;
         justify-content: center;
@@ -553,7 +563,7 @@
     }
 
     .event_photo {
-        padding: 10px;
+        padding: 5px;
     }
 
     .photo_gallery a {
@@ -562,8 +572,7 @@
 
     .news_section {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 20px;
     }
 
     .news_section h2 {
@@ -582,7 +591,8 @@
         margin: 0 0 20px 10px;
         background-color: #E5E5E5;
         border-radius: 5px;
-        width: 5%;
+        width: 20%;
+        height: 40px;
         text-align: center;
     }
 
@@ -593,25 +603,32 @@
     .news_article_section__container {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        /* content now stacked instead of side by side */
     }
 
     .news_article_container {
-        width: 32%;
+        width: 100%;
+        /* content now stacked instead of side by side */
         border-radius: 10px;
         padding: 20px 0;
         background-color: #F6F7F9;
         padding: 20px;
         box-sizing: border-box;
         filter: drop-shadow(2px 2px 3px gray);
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
     }
 
     .news_article_image img {
         max-width: 100%;
+        margin: 0 20px 0 0 ;
     }
 
     p.news_article_title {
         font-family: 'Raleway', sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         margin: 16px auto;
         color: #1c1c1c;
@@ -619,21 +636,20 @@
 
     p.news_article_caption {
         font-family: 'Open Sans', sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         color: #383838;
     }
 
     p.news_article_date {
         font-family: 'Open Sans', sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         color: #383838;
         font-weight: 100;
     }
 
     .charity_partners_section {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 20px;
     }
 
     .charity_partners_logo_container {
@@ -649,7 +665,7 @@
     }
 
     .footer_divider{
-        height: 80px;
+        height: 60px;
         background-color: #ED1C91;
         margin: 20px 0 0 0;
     }
@@ -660,8 +676,7 @@
 
     .footer_container {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 20px;
     }
 
     .footer_columns_container {
@@ -670,7 +685,8 @@
     }
 
     .footer_column {
-        width: 50%;
+        width: 100%;
+        /* increasing the size of the clickable area in mobile */
         padding: 25px 25px 25px 0;
         box-sizing: border-box;
     }
@@ -707,10 +723,15 @@
         /* to increase size of clickable area */
     }
 
-    .social_media_logo {
+    .social_media_icon__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    i.social_media_logo {
         color: #FFFFFF;
         margin: 16px 0 0 0; 
-        width: 24%;
+        font-size: 40px;
         padding: 0 0 20px 0;
     }
 

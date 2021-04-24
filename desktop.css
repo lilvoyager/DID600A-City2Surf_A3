@@ -100,14 +100,14 @@
         /* so the nav bar items turn blue and when the mouse hovers over them */
     }
 
-    .nav_button--active a {
-        color: #00aeef;
-        /* to add another class to the nav_button that is currently active so it is underline and the text is blue */
-    }
-
     i.search_icon {
         font-size: 20px;
         margin: 10px;
+    }
+
+    i.search_icon:hover {
+        color: #00aeef;
+        transition: 0.15s ease;
     }
 
     .sign_in_register_container {
@@ -117,7 +117,7 @@
 
     .sign_in_button {
         width: 102px;
-        border: 1.5px solid #ED1C91;
+        border: 2px solid #ED1C91;
         border-radius: 5px;
         margin: 0 0 0 10px;
         display: flex;
@@ -127,13 +127,22 @@
         /* to make pointer arrow appear when hovering over the button */
     }
 
+    .sign_in_button:hover{
+        border-color: #000;
+        transition: 0.4s ease;
+    }
+
     .sign_in_button p {
         font-size: 14px;
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
-        padding: 10px 16px;
+        padding: 10px 30px;
         margin: 0;
         cursor: pointer;
+    }
+    .sign_in_button p:hover{
+        color: #ED1C91;
+        transition: 0.4s ease;
     }
     
     .register_button {
@@ -148,6 +157,11 @@
         align-content: center;
         cursor: pointer;
         /* to make pointer arrow appear when hovering over the button */
+    }
+
+    .register_button:hover {
+        filter: opacity(0.6);
+        transition: 0.4s ease;
     }
 
     .register_button__container {
@@ -512,6 +526,18 @@
 
     .event_photo {
         padding: 20px;
+        margin: 0 0 10px;
+        filter: opacity(0.90) grayscale(5%); 
+        transition: 0.4s ease;
+        /* image at 80% opacity and slightly less vibrant when not selected / hovered */
+    }
+
+    .event_photo:hover{
+        filter: opacity(1) grayscale(0%) drop-shadow(2px 2px 8px gray);
+        transform: scale(1.05);
+	    position: relative; 
+        z-index: 1;
+        /* to give the image a drop shadow, and ensure that the image stays above the other images when hovered-over */
     }
 
     .news_section {
@@ -538,6 +564,11 @@
         border-radius: 5px;
         width: 5%;
         text-align: center;
+    }
+
+    .navigation_arrow_box:hover{
+        background-color: #7ED1F5;
+        transition: 0.4s ease;
     }
 
     i.arrow_icon {
@@ -652,9 +683,16 @@
         text-underline-offset: 5px;
     }
 
-    .social_media_logo {
+    .social_media_icon__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    i.social_media_logo {
         color: #FFFFFF;
-        margin: 16px 10px 0 0; 
+        margin: 16px 0 0 0; 
+        font-size: 30px;
+        padding: 0 0 20px 0;
     }
 
     .copyright p {

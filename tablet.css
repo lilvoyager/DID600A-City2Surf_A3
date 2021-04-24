@@ -30,7 +30,6 @@
 
     .header__container {
         width: 100%;
-        max-width: 1012px;
         display: flex;
         /* Flex allows the logo and nav content to appear side by side on page */
         align-items: center;
@@ -159,7 +158,7 @@
 
     .sign_in_button {
         width: 125px;
-        border: 1.5px solid #ED1C91;
+        border: 2px solid #ED1C91;
         border-radius: 5px;
         margin: 0 0 0 10px;
         display: flex;
@@ -236,8 +235,6 @@
     .hero {
         margin: 0 auto;
         padding: 0 34px;
-        max-width: 1012px;
-        /* will be applied to all sections so content stays in middle of page when responsive */
     }
 
     .hero_header_container{
@@ -271,8 +268,7 @@
 
     .fundraise_section {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 30px;
     }
 
     .fundraise_text__container {
@@ -315,7 +311,7 @@
     .fundraise_counter {
         position: relative;
         /* so absolute positions can be set for the children elements */
-        height: 34px;
+        height: 30px;
         margin: 16px 0;
     }
 
@@ -357,7 +353,7 @@
         margin: 16px 0;
         display: flex;
         justify-content: space-between;
-        padding: 10px 50px;
+        padding: 10px;
     }
 
     .fundraise_infographic {
@@ -392,8 +388,7 @@
 
     .records_section {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 30px;
     }
 
     h2 {
@@ -477,8 +472,7 @@
 
     .media_section {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 30px;
     }
 
     .youtube_video {
@@ -563,8 +557,7 @@
 
     .news_section {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 30px;
     }
 
     .news_section h2 {
@@ -633,8 +626,7 @@
 
     .charity_partners_section {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 30px;
     }
 
     .charity_partners_logo_container {
@@ -661,8 +653,7 @@
 
     .footer_container {
         margin: 0 auto;
-        padding: 34px;
-        max-width: 1012px;
+        padding: 30px;
     }
 
     .footer_columns_container {
@@ -708,10 +699,15 @@
         /* to increase size of clickable area */
     }
 
-    .social_media_logo {
+    .social_media_icon__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    i.social_media_logo {
         color: #FFFFFF;
         margin: 16px 0 0 0; 
-        width: 24%;
+        font-size: 40px;
         padding: 0 0 20px 0;
     }
 
