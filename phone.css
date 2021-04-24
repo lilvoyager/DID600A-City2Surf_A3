@@ -216,24 +216,10 @@
         color: #FFFFFF;
     }
 
-    .video_background {
-        z-index: -99;
+    .video_container {
+        display: none;
+        /* video only to play in tablet and desktop to save mobile data for users */
     }
-
-    .video_foreground, .video_background iframe {
-        margin: 40px 0 0 0;
-        width: 100%;
-        height: 200px;
-        pointer-events: none;
-    }
-
-    /* .video_background {
-        margin: 60px 0 0 0;
-        height: 450px;
-        background-image:url(https://j.gifs.com/WLkNGE.gif);
-        background-size: cover; */
-        /* so the GIF stretches across the entire page */
-        /* Action : not showing up */
     
     .hero_slideshow {
         width: 100%;
