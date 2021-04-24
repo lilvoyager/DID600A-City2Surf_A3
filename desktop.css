@@ -345,6 +345,7 @@
     .fundraise_infographic:hover {
         color: #00aeef;
         transition: 0.4s ease;
+        /* text to transition to the same colour based on "color:inherit" code at the bottom */
     }
 
     .fundraise_infographic__text_container {
@@ -357,6 +358,8 @@
     }
 
     p.fundraise_infographic__number {
+        color: inherit;
+        /* inherit the color property of the parent */
         font-family: 'Jost', sans-serif;
         font-size: 28px;
         margin: 0;
@@ -366,6 +369,8 @@
     }
 
     p.fundraise_infographic__text {
+        color: inherit; 
+        /* inherit the color property of the parent */
         font-family: 'Jost', sans-serif;
         font-size: 22px;
         margin: 0;
