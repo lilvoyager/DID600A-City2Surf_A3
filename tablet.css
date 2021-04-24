@@ -437,7 +437,6 @@
         align-items: center;
         position: relative;
         /* so absolute positions can be set for child element */
-        background-color: #FFFFFF;
         width: 75%;
         padding: 10px 0;
         margin: 0 0 10px 0;
@@ -520,14 +519,13 @@
 
     .event_cheer__icon_container {
         text-align: center;
-        background-color: #FFFFFF;
         width: 90%;
         padding: 10px 0;
         margin: 10px 0;
     }
 
     .cheer_icon {
-        color: #383838;
+        color: #ffffff;
         font-size: 90px;
         /* to override font-size:0 in main */
     }
