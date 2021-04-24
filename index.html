@@ -27,14 +27,18 @@
         <!-- main body -->
         <div class="header">
             <div class="header__container">
-                <a href="index.html"><img class="logo" src="images/C2S21-Logo.png"></a>
                 <nav>
+                    <a class="logo_container" href="index.html">
+                        <img class="logo" src="images/C2S21-Logo.png">
+                    </a>
+                    <div class="hamburger_container" onclick="toggleMenu();">
+                        <div id="hamburger" class="hamburger hamburger--stand" type="button">
+                            <div class="hamburger-box">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                        </div>
+                    </div>
                     <ul class="topnav">
-                        <li class="hamburger"><a onclick="myFunction();"><button class="hamburger hamburger--stand is-active" type="button">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button></a></li>
                         <!-- the Hamburger menu icon for mobile & tablet -->
                         <li class="nav_button"> 
                             <a href="">FUNDRAISING</a>

@@ -52,34 +52,19 @@
         justify-content: flex-end;
         /* to push nav elements to RHS */
     }
+    
+    .logo_container {
+        margin-right: auto;
+    }
 
     .topnav {
-        display: flex;
-    }
-
-    ul.topnav {
         margin: 0;
         /* offsetting the <ul> margin as it is automatically indented */
-    }
-
-    ul.topnav li.hamburger {
-        height: 25px;
-        width: 25px;
-        /* to display the hamburger icon */
-        display: none;
-        /* to hide the hamburger icon in desktop view */
-    }
-
-    ul.topnav li.hamburger a {
-        height: 100%;
-        color: #000000;
-        font-size: 25px;
-        text-decoration: none;
-        line-height: 1;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        /* to display the hamburger icon */
+    }
+
+    .hamburger_container {
+        display: none;
     }
 
     .nav_button a {

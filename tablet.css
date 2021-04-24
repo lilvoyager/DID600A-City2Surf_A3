@@ -44,6 +44,7 @@
     }
 
     nav {
+        position: relative;
         width: 100%;
         /* container width is now 100% as children elements are not stacked on top of each other instead of side-by-side. Flex is no longer displayed to facilitate this*/
         display: flex;
@@ -52,43 +53,29 @@
         /* to push nav elements to RHS */
     }
 
-    .topnav {
-        display: flex;
+    .logo_container {
+        margin-right: auto;
     }
 
-    ul.topnav {
-        position: absolute;
-        top: 23px;
-        /* so the menu items appear above the nav bar, rather than changing the size of the nav bar when clicked */
-        margin: 0;
-        /* offsetting the <ul> margin as it is automatically indented */
-        height: 25px;
-        width: 25px;
-        overflow: hidden;
-        /* to hide the links underneath the hamburger icon until clicked */
-        padding: 0;
-        cursor: pointer;
-        user-select: none;
-         /* to hide the links underneath the hamburger icon until clicked */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    .topnav {
+        display: none;
+    }
+
+    .hamburger_container {
         order: 3;
     }
 
-    ul.topnav li.hamburger a {
-        height: 100%;
-        color: #000000;
-        font-size: 25px;
-        text-decoration: none;
-        line-height: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* to display the hamburger icon */
-    }
-
     .topnav.responsive {
+        position: absolute;
+        top: 100%;
+        /* so the menu items appear above the nav bar, rather than changing the size of the nav bar when clicked */
+        margin: 0;
+        /* offsetting the <ul> margin as it is automatically indented */
+        padding: 0;
+        cursor: pointer;
+        user-select: none;
+        /* to hide the links underneath the hamburger icon until clicked */
+        padding-top: 12px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -96,15 +83,6 @@
         /* to increase the width of the clickable area */
         height: 500px;
         /* to display all items in the hamburger menu */
-    }
-
-    .topnav.responsive li.hamburger {
-        width: fit-content; 
-        /* To make the width of the <li> item the same as the hamburger icon */
-        padding: 0;
-        margin-bottom: 24px;
-        border: none;
-        /* to remove border appearing around hamburger in responsive */
     }
 
     .topnav.responsive li {
@@ -145,8 +123,7 @@
 
     i.search_icon {
         font-size: 20px;
-        margin: 10px 25px 10px 5px;
-        padding: 0 20px;
+        margin: 10px 24px;
         order: 2;
     }
 
