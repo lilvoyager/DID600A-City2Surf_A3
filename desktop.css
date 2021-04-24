@@ -117,7 +117,7 @@
 
     .sign_in_button {
         padding: 10px 8px;
-        width: 102px;
+        min-width: 102px;
         border: 2px solid #ED1C91;
         border-radius: 5px;
         margin: 0 0 0 10px;
@@ -148,7 +148,7 @@
     
     .register_button {
         padding: 10px 8px;
-        width: 102px;
+        min-width: 102px;
         border: 1.5px solid #ED1C91;
         background-color: #ED1C91;
         border-radius: 5px;

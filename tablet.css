@@ -157,7 +157,8 @@
     }
 
     .sign_in_button {
-        width: 125px;
+        padding: 10px 8px;
+        min-width: 125px;
         border: 2px solid #ED1C91;
         border-radius: 5px;
         margin: 0 0 0 10px;
@@ -166,19 +167,20 @@
         /* the centre align the text in the button */
         cursor: pointer;
         /* to make pointer arrow appear when hovering over the button */
+        text-decoration: none;
     }
 
     .sign_in_button p {
         font-size: 14px;
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
-        padding: 10px 16px;
         margin: 0;
         cursor: pointer;
     }
     
     .register_button {
-        width: 125px;
+        padding: 10px 8px;
+        min-width: 125px;
         border: 1.5px solid #ED1C91;
         background-color: #ED1C91;
         border-radius: 5px;
@@ -189,6 +191,7 @@
         align-content: center;
         cursor: pointer;
         /* to make pointer arrow appear when hovering over the button */
+        text-decoration: none;
     }
 
     .register_button__container {
@@ -197,8 +200,11 @@
     }
 
     i.user_icon {
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
         color: #FFFFFF;
-        font-size: 26px;
+        font-size: 18px;
         /* to display text and override font-size:0 in main */
     }
 
@@ -206,7 +212,6 @@
         font-size: 14px;
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
-        padding: 10px 16px;
         margin: 0;
         cursor: pointer;
         color: #FFFFFF;
@@ -245,8 +250,7 @@
     }
 
     .logo_date {
-        min-width: 300px;
-        max-width: 400px;
+        width: 300px;
         padding: 28px;
         margin: -80px 0 15px 0;
         /* so the logo overlaps with the header image */
