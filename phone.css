@@ -591,8 +591,10 @@
     }
 
     .news_article_image img {
-        max-width: 100%;
-        margin: 0 20px 0 0 ;
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        margin-right: 20px;
     }
 
     p.news_article_title {
