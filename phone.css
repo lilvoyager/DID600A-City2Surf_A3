@@ -59,6 +59,7 @@
 
     .topnav {
         display: none;
+        /* does not display in tablet and mobile */
     }
 
     .hamburger_container {
@@ -75,7 +76,6 @@
         cursor: pointer;
         user-select: none;
         /* to hide the links underneath the hamburger icon until clicked */
-
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -114,11 +114,6 @@
         color: #00aeef;
         transition: 0.15s ease;
         /* so the nav bar items turn blue and when the mouse hovers over them */
-    }
-
-    .nav_button--active a {
-        color: #00aeef;
-        /* to add another class to the nav_button that is currently active so it is underline and the text is blue */
     }
 
     i.search_icon {
