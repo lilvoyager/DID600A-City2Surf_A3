@@ -408,18 +408,16 @@
         position: relative;
         /* so absolute positions can be set for child element */
         width: 40%;
-        padding: 10px 0 50px 0;
         margin: 0 30px 10px 0;
     }
     
     .trophy_image {
         width: 50%;
+        margin: 0 0 10px 0;
+        /* to create space between the trophy and the time (which is no longer on the trophy, but under it) */
     }
 
     p.record_time {
-        position: absolute;
-        /* so the record time sits in the middle of the trophy */
-        bottom: 5%;
         font-family: 'Open Sans', sans-serif;
         font-size: 22px;
         font-weight: 600;
