@@ -190,7 +190,7 @@
     }
     
     
-    .hero_slideshow {
+    .hero__slideshow_container {
         display: none;
         /* hero slideshow will only be used in mobile to save mobile data */
     }

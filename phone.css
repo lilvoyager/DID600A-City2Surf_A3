@@ -193,8 +193,13 @@
         display: none;
         /* video only to play in tablet and desktop to save mobile data for users */
     }
+    .hero__slideshow_container {
+        margin-top: 117px;
+        /* to create space between the header and slideshow */
+    }
     
     .hero_slideshow {
+        display: none;
         width: 100%;
     }
     
@@ -316,6 +321,8 @@
 
     .fundraise_infographic__container {
         margin: 16px 0;
+        margin-left: 17.5%; 
+        /* to center the ingographic children elements */
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
