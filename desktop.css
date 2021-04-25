@@ -259,7 +259,7 @@
     p.fundraise_text {
         font-family: 'Jost', sans-serif;
         font-size: 18px;
-        columns: #383838;
+        color: #383838;
         margin: 0;
         /* to remove automatic spacing around text */
     }
@@ -267,7 +267,7 @@
     p.fundraise_amount {
         font-family: 'Jost', sans-serif;
         font-size: 30px;
-        columns: #383838;
+        color: #383838;
         font-weight: 600;
         margin: 0;
         /* to remove automatic spacing around text */
@@ -721,6 +721,7 @@
         font-weight: 300;
         text-decoration: underline dashed 1px #FFFFFF;
         text-underline-offset: 5px;
+        /* to create space between the footer item and the underline */
         cursor: pointer;
     }
 
