@@ -535,6 +535,8 @@
 
     .event_photo {
         padding: 10px;
+        max-width: 160px;
+        /* to make the photo grid a 3x3 or 4x4 in tablet - depending on screen size */
     }
 
     .photo_gallery a {

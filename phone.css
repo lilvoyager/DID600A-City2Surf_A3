@@ -417,7 +417,7 @@
         font-size: 22px;
         font-weight: 600;
         margin: 0 auto;
-        color: #383838;
+        color: #ffffff;
     }
 
     p.record_holder_name {
@@ -526,6 +526,7 @@
 
     .photo_gallery {
         margin: 0 auto;
+        padding: 32px 0;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -533,6 +534,8 @@
 
     .event_photo {
         padding: 5px;
+        max-width: 100px;
+        /* to make the photo grid a 3x3 or 4x4 in mobile - depending on screen size */
     }
 
     .photo_gallery a {
@@ -594,6 +597,7 @@
         height: 150px;
         width: 150px;
         object-fit: cover;
+        /* to make the photo a square in mobile view */
         margin-right: 20px;
     }
 
